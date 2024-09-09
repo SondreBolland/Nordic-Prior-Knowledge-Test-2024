@@ -10,32 +10,32 @@
     },
     "operators": {
         "answers": {
-            "Operators1": 24,
+            "Operators1": 24.0,
             "Operators2": 13.23,
-            "Operators3": 123123,
-            "Operators4": 2,
+            "Operators3": 123123.0,
+            "Operators4": 2.0,
             "Operators5": "bca"
         },
         "score": 1
     },
     "variables": {
         "answers": {
-            "Variables1a": 20,
-            "Variables1b": 20,
-            "Variables2a": 10,
-            "Variables2b": 10,
-            "Variables3a": 20,
-            "Variables3b": 20,
-            "Variables4a": 10,
-            "Variables4b": 10,
-            "Variables5a": 20,
-            "Variables5b": 30,
-            "Variables5c": 30,
-            "Variables6a": 30,
-            "Variables6b": 30,
-            "Variables6c": 30
+            "Variables1a": 20.0,
+            "Variables1b": 20.0,
+            "Variables2a": 10.0,
+            "Variables2b": 10.0,
+            "Variables3a": 20.0,
+            "Variables3b": 20.0,
+            "Variables4a": 10.0,
+            "Variables4b": 10.0,
+            "Variables5a": 20.0,
+            "Variables5b": 30.0,
+            "Variables5c": 30.0,
+            "Variables6a": 30.0,
+            "Variables6b": 30.0,
+            "Variables6c": 30.0
         },
-        "score": 1
+        "score": 0.2
     },
     "bool": {
         "answers": {
@@ -77,20 +77,20 @@
     },
     "loops": {
         "answers": {
-            "Loops1": 10,
-            "Loops2": 10,
+            "Loops1": 10.0,
+            "Loops2": 10.0,
             "Loops3": 100,
-            "Loops4": 4,
-            "Loops5": 5,
-            "Loops6": 9,
+            "Loops4": 4.0,
+            "Loops5": 5.0,
+            "Loops6": 9.0,
             "Loops7": "xbdac"            
         },
         "score": 1
     },
     "lists": {
         "answers": {
-            "Lists1": 20,
-            "Lists2": 25,
+            "Lists1": 20.0,
+            "Lists2": 25.0,
             "Lists3a": "[10, 20, 30]",
             "Lists3b": "[5, 35, 25]"
         },
@@ -98,15 +98,15 @@
     },
     "functions": {
         "answers": {
-            "Functions1": 15,
-            "Functions2": 1,
-            "Functions3": 1,
-            "Functions4": 5,
-            "Functions5": 10,
+            "Functions1": 15.0,
+            "Functions2": 1.0,
+            "Functions3": 1.0,
+            "Functions4": 5.0,
+            "Functions5": 10.0,
             "Functions6": "abcxyz",
             "Functions7": "c",
-            "Functions8": 25,
-            "Functions9": 90
+            "Functions8": 25.0,
+            "Functions9": 90.0
         },
         "score": 1
     }
