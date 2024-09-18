@@ -6,6 +6,17 @@ escape_character_dict = {
     "&#43;": "+"
 }
 
+institution_dict = {
+    "Universtitetet i Bergen (UiB)": "UiB",
+    "Universitetet i Oslo (UiO)": "UiO",
+    "Universitetet i Stavanger (UiS)": "UiS",
+    "Norges teknisk-naturvitenskapelige universitet (NTNU)": "NTNU",
+    "Høyskolen i Kristiania": "Kristiania",
+    "Høgskolen i Østfold": "HiOf",
+    "Norges miljø- og biovitenskapelige universitet (NMBU)": "NMBU",
+    "Høgskulen på Vestlandet (HVL)": "HVL"
+}
+
 gender_dict = {
     "kvinne": "f",
     "Kvinne": "f",

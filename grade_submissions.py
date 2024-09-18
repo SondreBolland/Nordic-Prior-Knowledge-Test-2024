@@ -48,6 +48,8 @@ for key in rubric.keys():
     for question in topic["answers"]:
         question_points_column = question + "_points"
         result_df[question_points_column] = None
+        three_alternatives_column = question + "_three"
+        result_df[three_alternatives_column] = None
 
 print("Submissions to be graded: " + str(len(prog_df.index)))
 with SupressSettingWithCopyWarning():
@@ -59,14 +61,21 @@ with SupressSettingWithCopyWarning():
             task_points = topic["score"]
             for question in topic["answers"]:
                 question_points_column = question + "_points"
+                three_alternatives_column = question + "_three"
                 try:
                     correct_answer = str(topic["answers"][question]).lower()
                     student_answer = prog_df[question][i]
+
                     if not isinstance(student_answer, str) and not isinstance(student_answer, bool) and student_answer % 1 == 0:
-                        student_answer = int(student_answer)
+                        student_answer = float(student_answer)
+
                     # Cast the answer in the correct datatype
                     student_answer = str(type(correct_answer)(student_answer)).lower()
                     #print(f"student{i}: {student_answer}, correct: {correct_answer}")
+                    
+                    if 'Variable' in question:
+                        student_answer = float(student_answer)
+                        correct_answer = float(correct_answer)
 
                     if correct_answer == student_answer:
                         points = task_points
@@ -76,12 +85,19 @@ with SupressSettingWithCopyWarning():
                         points = 0
 
                     result_df[question_points_column][i] = points
-                except KeyError:
-                    continue
+
                 except ValueError:
                     # Cast error. Set score as zero
                     result_df[question_points_column][i] = 0
-                    continue
+                    result_df[three_alternatives_column][i] = 0
+
+                try:
+                    if student_answer == "i don't know" or student_answer == "jeg vet ikke":
+                        result_df[three_alternatives_column][i] = "I don't know"
+                    else:
+                        result_df[three_alternatives_column][i] = points
+                except:
+                    result_df[three_alternatives_column][i] = 0
             result_df[str(key)][i] = topic_sum
             
         result_df["Total"][i] = sum
