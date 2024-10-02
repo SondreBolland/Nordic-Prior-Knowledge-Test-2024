@@ -1,10 +1,10 @@
 {
     "datatypes": {
         "answers": {
-            "datatypes1": "int",
-            "datatypes2": "float",
-            "datatypes3": "str",
-            "datatypes4": "list"
+            "Datatypes1": "int",
+            "Datatypes2": "float",
+            "Datatypes3": "str",
+            "Datatypes4": "list"
         },
         "score": 1
     },
